@@ -1,19 +1,52 @@
-Change directory
+Hello, world!
 ```bash
-cd
-cd ~
-cd ..
-cd -
-cd /
-cd /path/to/directory/name
+echo 'Hello, world!'
 ```
 
-Update, list and install stuff with apt
+Stop (SIGINT) any running foreground process in terminal with keypress:
+```bash
+# Ctrl+C
+```
+
+Don't get lost
+```bash
+whoami
+echo $USER
+pwd
+echo $PWD
+clear
+# Ctrl+L works similarly like "clear"
+```
+
+Update, list and install packages with apt
 ```bash
 sudo apt update && sudo apt upgrade -y
 apt list --installed
 sudo apt install cmatrix
-sudo apt install htop cowsay fortune neofetch tldr 
+sudo apt install htop cowsay fortune neofetch tldr ncal
+```
+
+Fun stuff
+```bash
+cal
+cowsay 'Mooooooooooooooohhhh1!!111!!'
+fortune
+fortune | cowsay -f tux
+cmatrix
+```
+
+Learn all about packages
+```bash
+whatis cal
+whereis cal
+which cal
+type -a cal
+```
+
+Learn all about commands
+```bash
+man cal
+tldr cal
 ```
 
 Get to know your pc
@@ -29,18 +62,17 @@ neofetch
 lsb_release -a
 ```
 
-Don't get lost
+Change directory
 ```bash
-whoami
-pwd
-whatis
-whereis
-which
-man
-tldr
-type -a
-clear
+cd
+cd ~
+cd ..
+cd -
+cd /
+cd /path/to/another/directory/
 ```
+
+
 
 Display directory content
 ```bash
@@ -50,11 +82,18 @@ ls -a
 ls -a -l
 ls -al
 ls -la
+```
 
-Open a bash inside bash and exit bash
+Create empty file(s)
 ```bash
-bash
-exit
+touch file1 file2 file3
+touch notes_{3..6}-{w..z}
+```
+
+Open a file and edit it
+```bash
+nano myTextFile
+vim anotherTextFile
 ```
 
 View a file
@@ -67,27 +106,10 @@ tail lastTenLinesOfTextFile
 
 Copy, move and remove files
 ```bash
-cp
-mv
-rm
+cp /path/of/original/file /path/to/new/destination/
+mv /old/path/file /new/path/
+rm oneFile anotherFile aThirdFile
 # use the -i flag to make the commands interactive/less "dangerous"
-```
-
-Delete an empty directory
-```bash
-rmdir 
-```
-
-Open a file and edit it
-```bash
-nano myTextFile
-vim anotherTextFile
-```
-
-Create empty file(s)
-```bash
-touch file1 file2 file3
-touch notes_{3..6}-{w..z}
 ```
 
 Create directory/directories
@@ -96,17 +118,9 @@ mkdir directory1 directory2 and many more directories
 mkdir {2024..2030}_{1..12}_photos-collection
 ```
 
-Fun stuff
+Delete an empty directory
 ```bash
-cal
-cowsay
-cmatrix
-fortune
-```
-
-Stop (SIGINT) the process with keypress:
-```bash
-Ctrl+C
+rmdir emptyDirectoryName 
 ```
 
 Start gitk and do not let it block the terminal with ampersand (&)
@@ -114,3 +128,8 @@ Start gitk and do not let it block the terminal with ampersand (&)
 gitk &
 ```
 
+Open a bash inside bash and exit bash
+```bash
+bash
+exit
+```
