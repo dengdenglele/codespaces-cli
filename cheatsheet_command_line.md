@@ -14,6 +14,7 @@ whoami
 echo $USER
 pwd
 echo $PWD
+echo $SHELL
 clear
 # Ctrl+L works similarly like "clear"
 ```
@@ -110,6 +111,12 @@ cp /path/of/original/file /path/to/new/destination/
 mv /old/path/file /new/path/
 rm oneFile anotherFile aThirdFile
 # use the -i flag to make the commands interactive/less "dangerous"
+```
+
+Find a file
+```bash
+# find a file by extension, "*" is a wildcard
+find root_path -name '*.ext'
 ```
 
 Create directory/directories
